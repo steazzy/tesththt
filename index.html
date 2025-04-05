@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Big Play Button</title>
+    <title>Огромная кнопка</title>
     <style>
         body {
             display: flex;
@@ -12,29 +12,28 @@
             height: 100vh;
             background-color: #f0f0f0;
         }
-        .big-button {
-            width: 300px;
-            height: 300px;
-            background-color: red;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-        }
-        iframe {
+        button {
+            font-size: 50px;
+            padding: 30px 60px;
             border: none;
-            width: 110px;
-            height: 200px;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            border-radius: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        button:hover {
+            background-color: darkred;
         }
     </style>
 </head>
 <body>
-
-    <div class="big-button">
-        <iframe src="https://www.myinstants.com/instant/stony-akh-akh-akh-87576/embed/" scrolling="no"></iframe>
-    </div>
-
+    <button onclick="playSound()">НАЖМИ МЕНЯ</button>
+    <audio id="sound" src="https://www.myinstants.com/media/sounds/stony-akh-akh-akh.mp3"></audio>
+    <script>
+        function playSound() {
+            document.getElementById('sound').play();
+        }
+    </script>
 </body>
 </html>
