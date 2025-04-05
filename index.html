@@ -3,27 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cool sound</title>
+    <title>Big Play Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .big-button {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+        iframe {
+            border: none;
+            width: 110px;
+            height: 200px;
+        }
+    </style>
 </head>
 <body>
-    <h1>lol</h1>
-    <audio id="myAudio" preload="auto">
-        <source src="https://www.myinstants.com/media/sounds/stony-akh-akh-akh.mp3" type="audio/mp3">
-        Your browser does not support audio playback.
-    </audio>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var audio = document.getElementById("myAudio");
+    <div class="big-button">
+        <iframe src="https://www.myinstants.com/instant/stony-akh-akh-akh-87576/embed/" scrolling="no"></iframe>
+    </div>
 
-            // Try playing the sound on first user interaction
-            document.body.addEventListener("click", function() {
-                audio.play().catch(error => console.log("Autoplay blocked:", error));
-            }, { once: true });
-
-            // Attempt autoplay (might be blocked in Chrome/Firefox)
-            audio.play().catch(error => console.log("Autoplay blocked:", error));
-        });
-    </script>
 </body>
 </html>
