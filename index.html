@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Огромная кнопка</title>
+    <title>Круглая кнопка</title>
     <style>
         body {
             display: flex;
@@ -13,13 +13,12 @@
             background-color: #f0f0f0;
         }
         button {
-            font-size: 50px;
-            padding: 30px 60px;
+            width: 150px;
+            height: 150px;
             border: none;
             background-color: red;
-            color: white;
+            border-radius: 50%;
             cursor: pointer;
-            border-radius: 20px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         }
         button:hover {
@@ -28,7 +27,7 @@
     </style>
 </head>
 <body>
-    <button onclick="playSound()">НАЖМИ МЕНЯ</button>
+    <button onclick="playSound()"></button>
     <audio id="sound" src="https://www.myinstants.com/media/sounds/stony-akh-akh-akh.mp3"></audio>
     <script>
         function playSound() {
