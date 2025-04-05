@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cool sound</title>
+</head>
+<body>
+    <h1>lol</h1>
+    <audio id="myAudio" preload="auto">
+        <source src="https://www.myinstants.com/media/sounds/stony-akh-akh-akh.mp3" type="audio/mp3">
+        Your browser does not support audio playback.
+    </audio>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var audio = document.getElementById("myAudio");
+
+            // Try playing the sound on first user interaction
+            document.body.addEventListener("click", function() {
+                audio.play().catch(error => console.log("Autoplay blocked:", error));
+            }, { once: true });
+
+            // Attempt autoplay (might be blocked in Chrome/Firefox)
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+        });
+    </script>
+</body>
+</html>
